@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QRCode WhatsApp</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+
+  <div class="badge">
+    <div class="badge-dot"></div>
+    <span>WhatsApp QR</span>
+  </div>
+
+  <h1>Gere seu<br><em>QRCode</em> agora</h1>
+  <p class="subtitle">Crie um link direto para o WhatsApp com mensagem pré-preenchida.</p>
+
+  <div class="field">
+    <label>Número com DDI + DDD</label>
+    <input id="numero" placeholder="Ex: 5511999999999" maxlength="15"/>
+  </div>
+
+  <div class="field">
+    <label>Mensagem</label>
+    <textarea id="mensagem" placeholder="Olá! Vim pelo QRCode..."></textarea>
+  </div>
+
+  <button class="btn-gerar" onclick="gerarQRCode()">
+    <div class="spinner" id="spinner"></div>
+    <span id="btn-text">Gerar QRCode</span>
+  </button>
+
+  <div class="result" id="result">
+    <div class="divider"></div>
+    <div class="qr-wrap">
+      <img id="qr" src="" alt="QRCode gerado"/>
+    </div>
+    <p class="qr-label">Aponte a câmera do celular para abrir o WhatsApp</p>
+    <button class="btn-download" onclick="baixarQRCode()">
+      ↓ Baixar QRCode
+    </button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
